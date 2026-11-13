@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-slate-800 bg-slate-50 selection:bg-teal-100 selection:text-teal-900;
+  }
+}
+
+/* Explicit Healthcare Navy Palette (guaranteed zero cache/bundler mismatch) */
+.bg-navy-950 { background-color: #060d1b !important; }
+.bg-navy-900 { background-color: #0b162c !important; }
+.bg-navy-800 { background-color: #132441 !important; }
+.bg-navy-700 { background-color: #1e3862 !important; }
+.bg-navy-50  { background-color: #f0f4f9 !important; }
+
+.text-navy-950 { color: #060d1b !important; }
+.text-navy-900 { color: #0b162c !important; }
+.text-navy-800 { color: #132441 !important; }
+.text-navy-700 { color: #1e3862 !important; }
+
+.border-navy-900 { border-color: #0b162c !important; }
+.border-navy-800 { border-color: #1a2f52 !important; }
+.border-navy-700 { border-color: #2b4774 !important; }
+.border-navy-100 { border-color: #dbe4f0 !important; }
+
+.from-navy-900 { --tw-gradient-from: #0b162c var(--tw-gradient-from-position) !important; --tw-gradient-to: rgb(11 22 44 / 0) var(--tw-gradient-to-position) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+.via-navy-800  { --tw-gradient-to: rgb(19 36 65 / 0) var(--tw-gradient-to-position) !important; --tw-gradient-stops: var(--tw-gradient-from), #132441 var(--tw-gradient-via-position), var(--tw-gradient-to) !important; }
+.to-navy-950   { --tw-gradient-to: #060d1b var(--tw-gradient-to-position) !important; }
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print, nav, aside, header, footer, .sidebar-nav {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-page-break {
+    page-break-before: always;
+  }
+  .print-card {
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+  }
+}
